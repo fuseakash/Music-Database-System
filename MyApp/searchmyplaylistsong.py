@@ -1,0 +1,19 @@
+#!C:\Users\Akash phuse\PycharmProjects\pythonProject\venv\Scripts\python.exe
+import cgi, cgitb 
+import mysql.connector
+cgitb.enable()
+form = cgi.FieldStorage() 
+
+
+if form.getvalue('search'):
+   song = form.getvalue('search')
+else:
+   song = "Please Select song"
+
+
+print("Content-type:text/html\r\n\r\n")
+print("<html>")
+print("<body>")
+print("<h1>"+song+"</h1>")
+print("</body>")
+print("</html>")
